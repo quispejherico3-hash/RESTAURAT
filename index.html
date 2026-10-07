@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APU ROOTS | Alta Cocina Andina & Bar</title>
+    <!-- Hoja de estilos CSS externa -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header class="header" id="inicio">
+        <nav class="nav-container">
+            <a href="#inicio" class="logo">APU ROOTS<span>.</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Nuestra Raíz</a></li>
+                <li><a href="#menu" class="nav-link">Carta Andina</a></li>
+                <li><a href="#galeria" class="nav-link">Ambiente</a></li>
+                <li><a href="#contacto" class="nav-link">Reservas</a></li>
+            </ul>
+            <!-- Botón para desplegar/ocultar el panel lateral de pedidos -->
+            <button id="cartBtn" class="cart-btn" aria-label="Ver pedido">
+                <i class="fas fa-utensils"></i>
+                <span>Mi Pedido</span>
+                <span id="cartCount" class="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Tradición Milenaria y Vanguardia</span>
+            <h1>El Sabor Ancestral de los Andes</h1>
+            <p>Una reinterpretación contemporánea de la culinaria altoandina con productos nativos. Selecciona tus platos y pídelos directo a tu mesa.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary">Ver Carta Andina</a>
+                <a href="#contacto" class="btn-secondary">Reservar Mesa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios / Experiencia -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Esencia Andina</h2>
+            <p class="section-subtitle">El respeto por la tierra, los Andes y el saber ancestral</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Papas Nativas & Tubérculos</h3>
+                    <p>Más de 15 variedades de papas nativas cosechadas por comunidades locales a más de 3,800 m.s.n.m.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Cocción a la Leña y Pachamanca</h3>
+                    <p>Técnicas tradicionales combinadas con alta cocina internacional para realzar sabores profundos.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Insumos Orgánicos de Altura</h3>
+                    <p>Quinua negra y roja, habas andinas, muña, huacatay y carnes selectas de alpaca y cordero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Menú Extendido y Pedidos Interactivos -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Carta de Altura</h2>
+            <p class="section-subtitle">Arma tu pedido al instante y solicítalo directamente al mesero</p>
+            
+            <!-- Filtros de Categoría -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="entradas">Entradas Andinas</button>
+                <button class="filter-btn" data-filter="principales">Platillos de la Tierra</button>
+                <button class="filter-btn" data-filter="postres">Postres Andinos</button>
+                <button class="filter-btn" data-filter="bebidas">Bebidas & Cocteles</button>
+            </div>
+
+            <!-- Cuadrícula de Platillos -->
+            <div class="menu-grid">
+                <!-- Entrada 1 -->
+                <div class="menu-item" data-category="entradas" data-name="Causa de Quinua Tricolor" data-price="20.00">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.PTPg1jHV2n8jtepumjndGwHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Causa de Quinua">
+                    <div class="menu-info">
+                        <h3>Causa de Quinua Tricolor</h3>
+                        <p>Quinua orgánica, papa amarilla nativa, emulsión de ají amarillo y trucha ahumada de río altoandino.</p>
+                        <div class="menu-footer">
+                            <span class="price">$20.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Entrada 2 -->
+                <div class="menu-item" data-category="entradas" data-name="Solterito Arequipeño de Autor" data-price="18.00">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.vYCrVazC0pvnf46-A6G8vQHaEE?r=0&w=970&h=533&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Solterito">
+                    <div class="menu-info">
+                        <h3>Solterito Andino Refinado</h3>
+                        <p>Habas tiernas, choclo cusqueño desgranado, queso fresco artesanal, cubos de palta y vinagreta de huacatay.</p>
+                        <div class="menu-footer">
+                            <span class="price">$18.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Principal 1 -->
+                <div class="menu-item" data-category="principales" data-name="Cordero en Cocción Lenta al Vino de Maíz" data-price="36.00">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.2cJZvnufzeFJyDJEd3MSFAHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cordero">
+                    <div class="menu-info">
+                        <h3>Cordero al Estilo Andino</h3>
+                        <p>Jataco de cordero tierno estofado por 12 horas en chicha de jora, acompañado de puré de ocas al horno.</p>
+                        <div class="menu-footer">
+                            <span class="price">$20.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Principal 2 -->
+                <div class="menu-item" data-category="principales" data-name="Lomo Fino de Alpaca en Reducción de Aguaymanto" data-price="39.00">
+                    <img src="https://static.wixstatic.com/media/9755d8_307ed7996eb24c4a9a2a7466d8d61120~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_85,usm_0.66_1.00_0.01/9755d8_307ed7996eb24c4a9a2a7466d8d61120~mv2.jpg" alt="Alpaca">
+                    <div class="menu-info">
+                        <h3>Lomo Fino de Alpaca</h3>
+                        <p>Corte tierno de alpaca sellado a la parrilla, bañado en salsa agridulce de aguaymanto y papas nativas confitadas.</p>
+                        <div class="menu-footer">
+                            <span class="price">$19.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Principal 3 -->
+                <div class="menu-item" data-category="principales" data-name="Trucha Andina en Costra de Almendras" data-price="32.00">
+                    <img src="https://th.bing.com/th/id/OIP.C-TmGzXVD4RxonAgv4W62AHaE7?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Trucha">
+                    <div class="menu-info">
+                        <h3>Trucha Andina en Costra de Almendras</h3>
+                        <p>Filete fresco de criadero altoandino, mantequilla clarificada a la muña y risotto de quinua al parmesano.</p>
+                        <div class="menu-footer">
+                            <span class="price">$15.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Postre 1 -->
+                <div class="menu-item" data-category="postres" data-name="Suspero de Quinua y Lúcuma" data-price="15.00">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.rzYglbJJ0GjstszQIAtlOwHaE7?r=0&w=800&h=533&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Postre de Lúcuma">
+                    <div class="menu-info">
+                        <h3>Suspiro de Lúcuma con Crujiente de Quinua</h3>
+                        <p>Suave manjar blanco de lúcuma de altura coronado con merengue al oporto y quinua pop caramelizada.</p>
+                        <div class="menu-footer">
+                            <span class="price">$12.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Postre 2 -->
+                <div class="menu-item" data-category="postres" data-name="Tres Leches de Maíz Morado" data-price="14.00">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.M0KhI1Y9xKT-t6-ECZpSiQHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Tres Leches">
+                    <div class="menu-info">
+                        <h3>Tres Leches de Maíz Morado</h3>
+                        <p>Bizcocho húmedo infusionado con esencia de chicha morada, especias andinas y frutos del bosque silvestres.</p>
+                        <div class="menu-footer">
+                            <span class="price">$14.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bebida 1 -->
+                <div class="menu-item" data-category="bebidas" data-name="Coctel Andino de Muña & Gin" data-price="14.00">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.NqnABMcJo2nYQGus_B2D5AHaFX?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Coctel de Muña">
+                    <div class="menu-info">
+                        <h3>Coctel Místico de Muña</h3>
+                        <p>Gin artesanal, infusión fresca de muña altoandina, zumo de limón sutil y almíbar de caña orgánica.</p>
+                        <div class="menu-footer">
+                            <span class="price">$14.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bebida 2 -->
+                <div class="menu-item" data-category="bebidas" data-name="Chicha Sour de Altura" data-price="13.00">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.MVbCKs3jD-CFmrbBe27ZeQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Chicha Sour">
+                    <div class="menu-info">
+                        <h3>Chicha Sour de Altura</h3>
+                        <p>Nuestra versión elegante del clásico pisco sour con reducción de chicha morada de maíz negro y especias.</p>
+                        <div class="menu-footer">
+                            <span class="price">$13.00</span>
+                            <button class="btn-add">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panel Lateral Desplegable del Carrito (Abierto u Oculto con clase .open) -->
+    <div id="cartModal" class="cart-modal hidden">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-bag"></i> Tu Pedido a Mesa</h3>
+                <button id="closeCart" class="close-btn">&times;</button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <p class="empty-cart">Tu pedido está vacío actualmente.</p>
+            </div>
+            <div class="cart-summary">
+                <div class="table-input-group">
+                    <label for="tableNumber">Número de Mesa o Ubicación *</label>
+                    <input type="number" id="tableNumber" placeholder="Ej. Mesa 4" min="1" required>
+                </div>
+                <div class="total-row">
+                    <span>Total Estimado:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button id="sendOrderBtn" class="btn-primary btn-whatsapp" disabled>
+                    <i class="fab fa-whatsapp"></i> Enviar Pedido al Mesero
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Galería -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Atmósfera Andina</h2>
+            <p class="section-subtitle">Arquitectura de piedra, calidez y confort en los Andes</p>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Salón rústico moderno"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Plato andino gourmet"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=600&q=80" alt="Bar y chimenea"></div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN UBICACIÓN & ENTORNO -->
+    <section id="ubicacion" class="location-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Ubicación</h2>
+            <p class="section-subtitle">Enclavados en el majestuoso paisaje de los Andes</p>
+            <div class="location-wrapper">
+                <div class="location-info">
+                    <h3><i class="fas fa-map-marker-alt"></i> Apu Roots Alta Cocina Andina</h3>
+                    <p>Ubicados en el corazón del Valle Sagrado, rodeados de cumbres nevadas y terrazas incas milenarias. Un refugio de paz, diseño rústico en piedra y alta cocina.</p>
+                    <ul class="location-details">
+                        <li><strong>Dirección:</strong> Calle Oxapampa S/N, Chipa-Ninacaca-Pasco</li>
+                        <li><strong>Horarios:</strong> Lunes a Domingo: 6:30 a.m. – 10:30 p.m.</li>
+                        <li><strong>Estacionamiento:</strong> Privado y seguro para visitantes</li>
+                    </ul>
+                    <a href="https://maps.google.com" target="_blank" class="btn-primary btn-map">
+                        <i class="fas fa-directions"></i> Ver en Google Maps
+                    </a>
+                </div>
+                <div class="location-image">
+                    <img src="https://videotourl.com/images/1791385018111-b45716ea-7065-4129-b856-2f1a81862167.jpg" alt="Paisaje de los Andes y Ubicación del Restaurante">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto y Reservas -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Reserva tu Mesa</h2>
+            <p class="section-subtitle">Asegura tu espacio para una velada con aroma a leña y tradición</p>
+            <div class="contact-wrapper">
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej. Rosa Huamán">
+                        <small class="error-msg">Por favor ingresa al menos 3 caracteres.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico *</label>
+                        <input type="email" id="correo" name="correo" required placeholder="restaurat@gmail.com">
+                        <small class="error-msg">Ingresa un correo electrónico válido.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono / Celular *</label>
+                        <input type="tel" id="telefono" name="telefono" required minlength="7" placeholder="Ej. +51 900 136 139">
+                        <small class="error-msg">Ingresa un número telefónico válido (mín. 7 dígitos).</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Detalle de la Reserva (Fecha, Hora, Personas) *</label>
+                        <textarea id="mensaje" name="mensaje" required minlength="10" rows="4" placeholder="Indica fecha, hora y requerimientos especiales..."></textarea>
+                        <small class="error-msg">El mensaje debe tener al menos 10 caracteres.</small>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Confirmar Reserva</button>
+                </form>
+                <div id="formSuccess" class="success-message hidden">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>¡Reserva Solicitada con Éxito!</h3>
+                    <p>Gracias por elegirnos. Nos pondremos en contacto contigo a la brevedad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 APU ROOTS Alta Cocina Andina. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Volver Arriba -->
+    <button id="scrollTopBtn" class="scroll-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
